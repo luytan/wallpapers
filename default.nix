@@ -7,7 +7,7 @@ stdenv.mkDerivation (finalAttrs: {
   version = "1.0.0";
 
   src = ./wallpapers;
-  
+
   installPhase = ''
     mkdir -p $out/wallpapers
     cp ./* $out/wallpapers/
@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
     description = "My wallpapers";
     homepage = "";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [ 
+    maintainers = with lib.maintainers; [
       "luytan@khora.me"
     ];
   };
