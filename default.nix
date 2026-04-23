@@ -9,8 +9,8 @@ stdenv.mkDerivation (finalAttrs: {
   src = ./wallpapers;
 
   installPhase = ''
-    mkdir -p $out/wallpapers
-    cp ./* $out/wallpapers/
+    mkdir -p $out/share/wallpapers
+    install -Dm444 ./* $out/share/wallpapers/
   '';
 
   meta = {
