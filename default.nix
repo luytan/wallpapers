@@ -5,12 +5,12 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "my_wallpapers";
   version = "1.0.0";
-
-  src = ./wallpapers;
+  src = ./images;
 
   installPhase = ''
-    mkdir -p $out/share/wallpapers
-    install -Dm444 ./* $out/share/wallpapers/
+    mkdir -p $out/share/{wallpapers,pfp}
+    install -Dm444 ./wallpapers/* $out/share/wallpapers/
+    install -Dm444 ./pfp/* $out/share/pfp/
   '';
 
   meta = {
